@@ -19,7 +19,7 @@ function getBuyedGoods(barcodes) {
             let tempGood = item.split("-");
             let goodId = parseInt(tempGood[0].substr(4).trim());
             let number = parseFloat(tempGood[1].trim());
-            if (buyedGoods[goodId] == undefined)
+            if (buyedGoods[goodId] === undefined)
                 buyedGoods[goodId] = number;
             else buyedGoods[goodId] += number;
         } else {
